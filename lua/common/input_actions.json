@@ -1,0 +1,10 @@
+{
+  "conv_incDiam":  {"title": "Increase Converter Diameter",  "category": "Converter Tuner"},
+  "conv_decDiam":  {"title": "Decrease Converter Diameter",  "category": "Converter Tuner"},
+  "conv_incStiff": {"title": "Increase Converter Stiffness", "category": "Converter Tuner"},
+  "conv_decStiff": {"title": "Decrease Converter Stiffness", "category": "Converter Tuner"},
+  "conv_incCoupl": {"title": "Increase Coupling AV Ratio",  "category": "Converter Tuner"},
+  "conv_decCoupl": {"title": "Decrease Coupling AV Ratio",  "category": "Converter Tuner"},
+  "conv_incStall": {"title": "Increase Stall Torque Ratio",  "category": "Converter Tuner"},
+  "conv_decStall": {"title": "Decrease Stall Torque Ratio",  "category": "Converter Tuner"}
+}
