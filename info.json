@@ -1,9 +1,9 @@
 {
-  "Name": "Universal Torque-Converter Tuner",
-  "Author": "Bethelss",
-  "Version": "0.1",
-  "Description": "Позволяет настраивать диаметр, жесткость и другие параметры гидротрансформатора на любом автомобиле.",
-  "Dependencies": [],
-  "Repository": "",
-  "Contact": ""
+  "name": "Universal Torque-Converter Tuner",
+  "author": "Bethelss",
+  "version": "0.1",
+  "description": "Позволяет настраивать диаметр, жесткость и другие параметры гидротрансформатора на любом автомобиле.",
+  "dependencies": [],
+  "repository": "",
+  "contact": ""
 }
