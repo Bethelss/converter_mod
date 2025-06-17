@@ -5,7 +5,8 @@ local M = {}
   любому автомобилю, где в powertrain присутствует гидротрансформатор.
 --]]
 
-M.id = "converterTunerExtension"
+-- идентификатор модуля совпадает с именем файла
+M.id = "converter_tuner_ext"
 
 -- добавляет контроллер к указанному автомобилю
 local function addController(veh)
