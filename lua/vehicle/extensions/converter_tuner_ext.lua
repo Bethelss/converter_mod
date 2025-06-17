@@ -1,19 +1,25 @@
 local M = {}
 
+--[[
+  Расширение автоматически подключает контроллер converterTuner к
+  любому автомобилю, где в powertrain присутствует гидротрансформатор.
+--]]
+
 M.id = "converterTunerExtension"
 
-function M.onVehicleSpawned(veh)
-  local data = veh:getJBeamFilename() and veh.data or nil
-  if not data or not data.powertrain then return end
-  if not data.powertrain.torqueConverter then return end
-
-  -- добавляем контроллер
-  veh:queueGameEngineLua([[
-    local v = be:getObjectByID(]] .. veh:getID() .. [[)
-    if v and not v:hasController("converterTuner") then
-      v:addController("converterTuner")
-    end
-  ]])
+-- добавляет контроллер к указанному автомобилю
+local function addController(veh)
+  veh:queueGameEngineLua(string.format([[local v = be:getObjectByID(%d)
+if v and not v:hasController("converterTuner") then
+  v:addController("converterTuner")
+end]], veh:getID()))
 end
 
-return M
+-- вызывается при появлении автомобиля в мире
+function M.onVehicleSpawned(veh)
+  local data = veh:getJBeamFilename() and veh.data or nil
+  if not data or not data.powertrain or not data.powertrain.torqueConverter then return end
+  addController(veh)
+end
+
+return M -- обязательный возврат модуля
